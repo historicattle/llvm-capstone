@@ -2198,7 +2198,7 @@ void PrinterCapstone::asmWriterEmitPrintAliasInstrBody(
      << "  memcpy(substr, AsmString, I);\n"
      << "  substr[I] = '\\0';\n"
      << "  SStream_concat0(OS, substr);\n"
-     << "  free(substr);\n";
+     << "  cs_mem_free(substr);\n";
 
   OS << "  if (AsmString[I] != '\\0') {\n";
   OS << "    if (AsmString[I] == ' ' || AsmString[I] == '\\t') {\n";
